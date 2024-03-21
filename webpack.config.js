@@ -18,7 +18,15 @@ module.exports = (paths) => ({
         include: path.resolve(__dirname, paths.scripts.src),
         use: "ts-loader",
       },
+      {
+        test: /\.tsx?$/, // Matches .ts and .tsx files
+        use: "ts-loader", // Use ts-loader for TypeScript files
+        exclude: /node_modules/,
+      },
     ],
   },
   plugins: [],
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
+  },
 });
