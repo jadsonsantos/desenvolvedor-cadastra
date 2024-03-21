@@ -17,6 +17,7 @@ const paths = {
   },
   styles: {
     src: "src/scss/main.scss",
+    watch: "src/**/*.scss",
   },
   img: {
     src: "src/img/**/*",
@@ -37,6 +38,7 @@ function server() {
     server: {
       baseDir: "./dist",
     },
+    files: ["./dist/**/*.*"], // Observa todos os arquivos no diretório 'dist'
   });
 }
 
@@ -92,7 +94,7 @@ const dev = () => {
     "change",
     browserSync.reload
   );
-  watch(paths.styles.src, { ignoreInitial: false }, styles);
+  watch(paths.styles.watch, { ignoreInitial: false }, styles);
   watch(paths.img.src, { ignoreInitial: false }, img);
   watch(paths.html.src, { ignoreInitial: false }, html).on(
     "change",
