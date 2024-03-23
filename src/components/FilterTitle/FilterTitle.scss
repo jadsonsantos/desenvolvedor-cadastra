@@ -1,0 +1,13 @@
+.filter-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  color: var(--color-6);
+  margin: 24px 0 14px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
