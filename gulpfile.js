@@ -6,6 +6,7 @@ const del = require("del");
 const autoprefixer = require("gulp-autoprefixer");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
+const concat = require('gulp-concat');
 const browserSync = require("browser-sync").create();
 
 const webpackConfig = require("./webpack.config.js");
@@ -16,8 +17,7 @@ const paths = {
     watch: ["src/**/*.ts", "src/**/*.tsx"],
   },
   styles: {
-    src: "src/scss/main.scss",
-    watch: "src/**/*.scss",
+    src: ["src/**/*.scss"],
   },
   img: {
     src: "src/img/**/*",
@@ -52,6 +52,7 @@ function styles() {
       })
     )
     .pipe(sourcemaps.write())
+    .pipe(concat('main.css'))
     .pipe(dest(paths.dest))
     .pipe(browserSync.stream());
 }
@@ -94,7 +95,7 @@ const dev = () => {
     "change",
     browserSync.reload
   );
-  watch(paths.styles.watch, { ignoreInitial: false }, styles);
+  watch(paths.styles.src, { ignoreInitial: false }, styles);
   watch(paths.img.src, { ignoreInitial: false }, img);
   watch(paths.html.src, { ignoreInitial: false }, html).on(
     "change",

@@ -23,6 +23,14 @@ module.exports = (paths) => ({
         use: "ts-loader", // Use ts-loader for TypeScript files
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // Injeta o CSS no DOM
+          'css-loader', // Interpreta @import e url() como importações/requises
+          'sass-loader', // Compila Sass para CSS
+        ],
+      },
     ],
   },
   plugins: [],
