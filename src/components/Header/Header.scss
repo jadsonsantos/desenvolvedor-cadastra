@@ -1,0 +1,10 @@
+.header {
+  padding: 20px 0;
+  border-bottom: 2px solid var(--color-5);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
