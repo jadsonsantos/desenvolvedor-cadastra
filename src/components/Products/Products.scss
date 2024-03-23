@@ -1,0 +1,12 @@
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+  gap: 20px;
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(3, 195px);
+    grid-row-gap: 40px;
+    grid-column-gap: 64px;
+    justify-content: center;
+  }
+}

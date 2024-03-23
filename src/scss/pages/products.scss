@@ -1,0 +1,49 @@
+.products-page {
+  padding: 0 0 42px;
+
+  .title {
+    text-align: center;
+    margin: 24px 0 12px;
+  }
+
+  .button-load-more {
+    margin: 40px auto 0;
+    width: 175px;
+  }
+
+  .products {
+    margin-top: 35px;
+  }
+
+  @media (min-width: 960px) {
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .main-content {
+      padding-top: 54px;
+      display: flex;
+      gap: 44px;
+    }
+
+    .products {
+      margin-top: 0;
+      width: 960px;
+    }
+
+    .filters {
+      width: 160px;
+    }
+
+    .title {
+      margin: 0;
+      text-align: left;
+    }
+
+    .button-load-more {
+      margin-top: 73px;
+    }
+  }
+}
