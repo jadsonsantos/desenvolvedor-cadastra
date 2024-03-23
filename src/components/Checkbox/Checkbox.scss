@@ -1,0 +1,19 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+
+  &__input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 16px;
+    height: 16px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

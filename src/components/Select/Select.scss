@@ -1,0 +1,43 @@
+.select {
+  cursor: pointer;
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  &__current {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px;
+    border: 1px solid var(--color-2);
+  }
+
+  &__list {
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    border: 1px solid var(--color-2);
+    border-top: none;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__option {
+    padding: 8px;
+
+    &:hover {
+      background-color: var(--color-4);
+      color: var(--color-white);
+    }
+  }
+
+  &--open {
+    .select__list {
+      opacity: 1;
+    }
+  }
+}
