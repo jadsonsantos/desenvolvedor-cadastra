@@ -1,4 +1,4 @@
-const apiUrl = 'https://db-cadastra.vercel.app/'
+const apiUrl = 'https://db-cadastra.vercel.app'
 
 const fetchProducts = async () => {
   try {
