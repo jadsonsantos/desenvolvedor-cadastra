@@ -1,4 +1,4 @@
-const apiUrl = process.env.REACT_APP_API_URL
+const apiUrl = 'https://db-cadastra.vercel.app/'
 
 const fetchProducts = async () => {
   try {
